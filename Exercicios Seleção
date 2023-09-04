@@ -1,0 +1,336 @@
+//Faça um algoritmo que leia dois números inteiros e mostre o maior deles.
+
+package main
+
+import "fmt"
+
+func main() {
+	var x, y int
+	fmt.Print("Primeiro número: ")
+	fmt.Scan(&x)
+	fmt.Print("Segundo número: ")
+	fmt.Scan(&y)
+	if x > y {
+		fmt.Print("O primeiro número é maior")
+	} else if x < y {
+		fmt.Print("O segundo número é maior")
+	} else {
+		fmt.Print("Ambos os números são iguais")
+	}
+}
+
+######################################################################################################################################
+
+//Faça um algoritmo que leia três números inteiros e mostre o menor deles.
+
+package main
+
+import "fmt"
+
+func main() {
+
+	var n1, n2, n3 int
+
+	fmt.Print("Primeiro número: ")
+	fmt.Scan(&n1)
+	fmt.Print("Segundo número: ")
+	fmt.Scan(&n2)
+	fmt.Print("Terceiro número: ")
+	fmt.Scan(&n3)
+
+	if n1 < n2 && n1 < n3 {
+		fmt.Print("O primeiro número é o menor")
+	} else if n2 < n1 && n2 < n3 {
+		fmt.Print("O segundo número é o menor")
+	} else if n3 < n1 && n3 < n2 {
+		fmt.Print("O terceiro número é o menor")
+	} else if n1 == n2 && n1 < n3 {
+		fmt.Print("Os dois primeiros números são os menores")
+	} else if n1 == n3 && n1 < n2 {
+		fmt.Print("O primeiro e o último números são os menores")
+	} else if n2 == n3 && n2 < n1 {
+		fmt.Print("O segundo e terceiro são os menores")
+	} else {
+		fmt.Print("Todos os números são iguais")
+	}
+}
+
+######################################################################################################################################
+
+//Faça um algoritmo que leia um número inteiro e mostre se ele é par ou ímpar.
+
+package main
+
+import "fmt"
+
+func main() {
+
+	var numero int
+
+	fmt.Print("Escolha um número: ")
+	fmt.Scan(&numero)
+
+	if numero%2 == 0 {
+		fmt.Print("É um número par")
+	} else {
+		fmt.Print("É um número ímpar")
+	}
+}
+
+######################################################################################################################################
+
+//Faça um algoritmo que leia a altura e o sexo de uma pessoa e mostre se ela está abaixo, dentro ou
+//acima do peso ideal, utilizando as fórmulas do exercício 3 da lista de algoritmos sequenciais.
+
+package main
+
+import "fmt"
+
+func main() {
+
+	var peso, altura float64
+
+	fmt.Print("Peso: ")
+	fmt.Scan(&peso)
+
+	fmt.Print("Altura: ")
+	fmt.Scan(&altura)
+
+	imc := peso / (altura * altura)
+	
+	if imc < 18.50 {
+		fmt.Print("Você está abaixo do seu peso ideal.")
+	} else if imc > 24.99 {
+		fmt.Print("Você está acima do seu peso ideal")
+	} else {
+		fmt.Print("Você está no seu peso ideal")
+	}
+}
+
+######################################################################################################################################
+
+//Faça um algoritmo que leia um número inteiro e mostre se ele é múltiplo de 3 e de 5 ao mesmo tempo.
+
+package main
+
+import "fmt"
+
+func main() {
+
+	var num int
+
+	fmt.Print("Escolha um número: ")
+	fmt.Scan(&num)
+
+	if num%3 == 0 && num%5 == 0 {
+		fmt.Print("É um múltiplo de 3 e 5 ao mesmo tempo")
+	} else {
+		fmt.Print("Não é múltiplo de 3 e 5 ao mesmo tempo")
+	}
+}
+
+######################################################################################################################################
+
+//Faça um algoritmo que leia dois números inteiros e mostre o resultado da multiplicação entre eles,
+//se ambos forem positivos; ou a soma, se pelo menos um deles for negativo.
+
+package main
+
+import "fmt"
+
+func main() {
+
+	var num1, num2 int
+
+	fmt.Print("Primeiro número: ")
+	fmt.Scan(&num1)
+
+	fmt.Print("Segundo número: ")
+	fmt.Scan(&num2)
+
+	if num1 >= 0 && num2 >= 0 {
+		resultado := num1 * num2
+		fmt.Print(resultado)
+	} else {
+		resultado := num1 + num2
+		fmt.Print(resultado)
+	}
+}
+
+######################################################################################################################################
+
+//Faça um algoritmo que leia o salário de um funcionário e calcule o seu novo salário
+//com um aumento de 10% se o salário for menor que R$ 1000,00; ou de 5% se o salário
+//for maior ou igual a R$ 1000,00.
+
+package main
+
+import "fmt"
+
+func main() {
+
+	//declaracao de variavel
+	var salary float64
+
+	//"coleta" de dados
+	fmt.Println("Quanto você recebe mensalmente? ")
+	fmt.Scan(&salary)
+
+	//condicao para salario maior ou igual a mil
+	if salary >= 1000 {
+
+		//novo valor do salario com aumento de 5%
+		salary = salary + (salary * 0.05)
+		fmt.Print("Com o aumento de 5% seu novo salário é de ", salary, " reais")
+
+	} else {
+
+		//novo valor do salario com aumento de 10%
+		salary = salary + (salary * 0.1)
+		fmt.Print("Com o aumento de 10% seu novo salário é de ", salary, " reais")
+
+	}
+}
+
+######################################################################################################################################
+
+//Faça um algoritmo que leia um número inteiro entre 1 e 7 e mostre o dia da
+//semana correspondente (1 = domingo, 2 = segunda-feira, etc.).
+
+package main
+
+import "fmt"
+
+func main() {
+
+	//declaracao de variavel
+	var weekDay int
+
+	//coleta de dados
+	fmt.Print("Escolha em número o dia da semana (1-7): ")
+	fmt.Scan(&weekDay)
+
+	//usando o "escolha--caso" do portugol
+	switch weekDay {
+
+	//casos, dependendo do numero retornam tal dia
+	case 1:
+		fmt.Print("O dia da semana é Domingo")
+
+	case 2:
+		fmt.Print("O dia da semana é Segunda")
+
+	case 3:
+		fmt.Print("O dia da semana é Terça")
+
+	case 4:
+		fmt.Print("O dia da semana é Quarta")
+
+	case 5:
+		fmt.Print("O dia da semana é Quinta")
+
+	case 6:
+		fmt.Print("O dia da semana é Sexta")
+
+	case 7:
+		fmt.Print("O dia da semana é Sábado")
+
+	}
+}
+
+######################################################################################################################################
+
+//Faça um algoritmo que leia três números reais e mostre-os em ordem crescente.
+
+package main
+
+import "fmt"
+
+func main() {
+
+	//declaracao variaveis
+	var num1, num2, num3 float64
+
+	//coleta de informacoes
+	fmt.Println("Escolha três números reais diferentes entre si.")
+
+	fmt.Print("Primeiro número: ")
+	fmt.Scan(&num1)
+
+	fmt.Print("Segundo número: ")
+	fmt.Scan(&num2)
+
+	fmt.Print("Terceiro número: ")
+	fmt.Scan(&num3)
+
+	//condicionais para botar em ordem
+	if num1 < num2 && num2 < num3 {
+
+		fmt.Print("Em ordem crescente: ", num1, num2, num3)
+
+	} else if num1 < num3 && num3 < num2 {
+
+		fmt.Print("Em ordem crescente: ", num1, num3, num2)
+
+	} else if num2 < num1 && num1 < num3 {
+
+		fmt.Print("Em ordem crescente: ", num2, num1, num3)
+
+	} else if num2 < num3 && num3 < num1 {
+
+		fmt.Print("Em ordem crescente: ", num2, num3, num1)
+
+	} else if num3 < num1 && num1 < num2 {
+
+		fmt.Print("Em ordem crescente: ", num3, num1, num2)
+
+	} else if num3 < num2 && num2 < num1 {
+
+		fmt.Print("Em ordem crescente: ", num3, num2, num1)
+
+	} else {
+
+		fmt.Print("Error")
+
+	}
+}
+
+#####################################################################################################################
+
+//Faça um algoritmo que leia a idade de uma pessoa e mostre a sua classificação,
+//de acordo com a seguinte tabela:
+//até 9 anos: mirim
+//10 a 13 anos: infantil
+//14 a 17 anos: juvenil
+//maiores de 18 anos: adulto
+
+package main
+
+import "fmt"
+
+func main() {
+
+	var age int
+
+	fmt.Print("Qual sua idade? ")
+	fmt.Scan(&age)
+
+	if age >= 18 {
+
+		fmt.Print("Você se enquadra como adulto")
+
+	} else if age > 0 && age <= 9 {
+
+		fmt.Print("Você se enquadra como mirim")
+
+	} else if age > 9 && age < 14 {
+
+		fmt.Print("Você se enquadra como infantil")
+
+	} else {
+
+		fmt.Print("Você se enquadra como juvenil")
+
+	}
+
+}
