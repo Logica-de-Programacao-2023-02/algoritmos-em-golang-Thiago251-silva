@@ -1,4 +1,4 @@
-//Faça um algoritmo que leia dois números inteiros e mostre o maior deles.
+//1.Faça um algoritmo que leia dois números inteiros e mostre o maior deles.
 
 package main
 
@@ -21,7 +21,7 @@ func main() {
 
 ######################################################################################################################################
 
-//Faça um algoritmo que leia três números inteiros e mostre o menor deles.
+//2.Faça um algoritmo que leia três números inteiros e mostre o menor deles.
 
 package main
 
@@ -57,7 +57,7 @@ func main() {
 
 ######################################################################################################################################
 
-//Faça um algoritmo que leia um número inteiro e mostre se ele é par ou ímpar.
+//3.Faça um algoritmo que leia um número inteiro e mostre se ele é par ou ímpar.
 
 package main
 
@@ -79,7 +79,7 @@ func main() {
 
 ######################################################################################################################################
 
-//Faça um algoritmo que leia a altura e o sexo de uma pessoa e mostre se ela está abaixo, dentro ou
+//4.Faça um algoritmo que leia a altura e o sexo de uma pessoa e mostre se ela está abaixo, dentro ou
 //acima do peso ideal, utilizando as fórmulas do exercício 3 da lista de algoritmos sequenciais.
 
 package main
@@ -109,7 +109,7 @@ func main() {
 
 ######################################################################################################################################
 
-//Faça um algoritmo que leia um número inteiro e mostre se ele é múltiplo de 3 e de 5 ao mesmo tempo.
+//5.Faça um algoritmo que leia um número inteiro e mostre se ele é múltiplo de 3 e de 5 ao mesmo tempo.
 
 package main
 
@@ -131,7 +131,7 @@ func main() {
 
 ######################################################################################################################################
 
-//Faça um algoritmo que leia dois números inteiros e mostre o resultado da multiplicação entre eles,
+//6.Faça um algoritmo que leia dois números inteiros e mostre o resultado da multiplicação entre eles,
 //se ambos forem positivos; ou a soma, se pelo menos um deles for negativo.
 
 package main
@@ -159,7 +159,7 @@ func main() {
 
 ######################################################################################################################################
 
-//Faça um algoritmo que leia o salário de um funcionário e calcule o seu novo salário
+//7.Faça um algoritmo que leia o salário de um funcionário e calcule o seu novo salário
 //com um aumento de 10% se o salário for menor que R$ 1000,00; ou de 5% se o salário
 //for maior ou igual a R$ 1000,00.
 
@@ -170,31 +170,31 @@ import "fmt"
 func main() {
 
 	//declaracao de variavel
-	var salary float64
+	var salário float64
 
 	//"coleta" de dados
 	fmt.Println("Quanto você recebe mensalmente? ")
-	fmt.Scan(&salary)
+	fmt.Scan(&salário)
 
-	//condicao para salario maior ou igual a mil
-	if salary >= 1000 {
+	//condicao para salário maior ou igual a mil
+	if salário >= 1000 {
 
 		//novo valor do salario com aumento de 5%
-		salary = salary + (salary * 0.05)
-		fmt.Print("Com o aumento de 5% seu novo salário é de ", salary, " reais")
+		salário = salário + (salário * 0.05)
+		fmt.Print("Com o aumento de 5% seu novo salário é de ", salário, " reais")
 
 	} else {
 
 		//novo valor do salario com aumento de 10%
-		salary = salary + (salary * 0.1)
-		fmt.Print("Com o aumento de 10% seu novo salário é de ", salary, " reais")
+		salário = salário + (salário * 0.1)
+		fmt.Print("Com o aumento de 10% seu novo salário é de ", salário, " reais")
 
 	}
 }
 
 ######################################################################################################################################
 
-//Faça um algoritmo que leia um número inteiro entre 1 e 7 e mostre o dia da
+//8.Faça um algoritmo que leia um número inteiro entre 1 e 7 e mostre o dia da
 //semana correspondente (1 = domingo, 2 = segunda-feira, etc.).
 
 package main
@@ -203,36 +203,32 @@ import "fmt"
 
 func main() {
 
-	//declaracao de variavel
-	var weekDay int
+	var semana int
 
-	//coleta de dados
 	fmt.Print("Escolha em número o dia da semana (1-7): ")
-	fmt.Scan(&weekDay)
+	fmt.Scan(&semana)
 
-	//usando o "escolha--caso" do portugol
-	switch weekDay {
+	switch semana {
 
-	//casos, dependendo do numero retornam tal dia
-	case 1:
+	caso 1:
 		fmt.Print("O dia da semana é Domingo")
 
-	case 2:
+	caso 2:
 		fmt.Print("O dia da semana é Segunda")
 
-	case 3:
+	caso 3:
 		fmt.Print("O dia da semana é Terça")
 
-	case 4:
+	caso 4:
 		fmt.Print("O dia da semana é Quarta")
 
-	case 5:
+	caso 5:
 		fmt.Print("O dia da semana é Quinta")
 
-	case 6:
+	caso 6:
 		fmt.Print("O dia da semana é Sexta")
 
-	case 7:
+	caso 7:
 		fmt.Print("O dia da semana é Sábado")
 
 	}
@@ -240,7 +236,7 @@ func main() {
 
 ######################################################################################################################################
 
-//Faça um algoritmo que leia três números reais e mostre-os em ordem crescente.
+//9.Faça um algoritmo que leia três números reais e mostre-os em ordem crescente.
 
 package main
 
@@ -248,10 +244,8 @@ import "fmt"
 
 func main() {
 
-	//declaracao variaveis
 	var num1, num2, num3 float64
 
-	//coleta de informacoes
 	fmt.Println("Escolha três números reais diferentes entre si.")
 
 	fmt.Print("Primeiro número: ")
@@ -263,7 +257,6 @@ func main() {
 	fmt.Print("Terceiro número: ")
 	fmt.Scan(&num3)
 
-	//condicionais para botar em ordem
 	if num1 < num2 && num2 < num3 {
 
 		fmt.Print("Em ordem crescente: ", num1, num2, num3)
@@ -297,7 +290,7 @@ func main() {
 
 #####################################################################################################################
 
-//Faça um algoritmo que leia a idade de uma pessoa e mostre a sua classificação,
+//10.Faça um algoritmo que leia a idade de uma pessoa e mostre a sua classificação,
 //de acordo com a seguinte tabela:
 //até 9 anos: mirim
 //10 a 13 anos: infantil
@@ -310,24 +303,24 @@ import "fmt"
 
 func main() {
 
-	var age int
+	var idade int
 
 	fmt.Print("Qual sua idade? ")
-	fmt.Scan(&age)
+	fmt.Scan(&idade)
 
-	if age >= 18 {
+	if idade >= 18 {
 
 		fmt.Print("Você se enquadra como adulto")
 
-	} else if age > 0 && age <= 9 {
+	} else if idade > 0 && idade <= 9 {
 
 		fmt.Print("Você se enquadra como mirim")
 
-	} else if age > 9 && age < 14 {
+	} else if idade > 9 && idade < 14 {
 
 		fmt.Print("Você se enquadra como infantil")
 
-	} else {
+	} else if idade > 14 && idade < 17 {
 
 		fmt.Print("Você se enquadra como juvenil")
 
